@@ -25,4 +25,4 @@ USER togglemaster
 
 EXPOSE 8003
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8003", "app:app"]
+CMD ["opentelemetry-instrument", "gunicorn", "--bind", "0.0.0.0:8003", "app:app"]
